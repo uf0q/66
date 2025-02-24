@@ -374,8 +374,56 @@
     #dots-boxes .box {
       fill-opacity: 0.3;
     }
-    
-    /* أنماط لعبة "برا السالفة" */
+    /* ------------------ استجابة الموقع ------------------ */
+    @media (max-width: 768px) {
+      .sidebar {
+        width: 100%;
+        height: auto;
+        position: relative;
+        padding: 10px;
+      }
+      .main-content {
+        margin-right: 0;
+        padding: 15px;
+      }
+      #scoreboard { grid-template-columns: 1fr; }
+      .board { max-width: 100%; }
+      #uno-settings, #uno-gameArea { width: 100%; }
+      #uno-hands {
+        flex-direction: column;
+      }
+      #opponent-hand, #player-hand, #uno-deck-center {
+        width: 100%;
+      }
+      /* استجابة Dots & Boxes */
+      #dots-boxes {
+        padding: 1rem;
+      }
+      #dots-boxes .title {
+        font-size: 1.8rem;
+      }
+      #dots-boxes .btn {
+        font-size: 0.9rem;
+        padding: 0.6rem 1rem;
+      }
+    }
+    /* استجابة الآيباد (من 769 بكسل إلى 1024 بكسل) */
+    @media (min-width: 769px) and (max-width: 1024px) {
+      .sidebar {
+        width: 200px;
+        padding: 15px;
+      }
+      .main-content {
+        margin-right: 200px;
+        padding: 20px;
+      }
+      .board {
+        max-width: 90%;
+      }
+    }
+  </style>
+  <style>
+    /* ------------------ أنماط لعبة "برا السالفة" ------------------ */
     @import url('https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;700&display=swap');
     #bra-salfa {
       font-family: 'Cairo', sans-serif;
@@ -467,44 +515,6 @@
       margin-bottom: 10px;
       color: #5563DE;
     }
-    
-    /* وسائط العرض: استجابة للجوال والآيباد */
-    @media (max-width: 768px) {
-      .sidebar {
-        width: 100%;
-        height: auto;
-        position: relative;
-        padding: 10px;
-      }
-      .main-content {
-        margin-right: 0;
-        padding: 15px;
-      }
-      #scoreboard { grid-template-columns: 1fr; }
-      .board { max-width: 100%; }
-      #uno-settings, #uno-gameArea { width: 100%; }
-      #uno-hands {
-        flex-direction: column;
-      }
-      #opponent-hand, #player-hand, #uno-deck-center {
-        width: 100%;
-      }
-      /* استجابة Dots & Boxes */
-      #dots-boxes {
-        padding: 1rem;
-      }
-      #dots-boxes .title {
-        font-size: 1.8rem;
-      }
-      #dots-boxes .btn {
-        font-size: 0.9rem;
-        padding: 0.6rem 1rem;
-      }
-    }
-  </style>
-  <style>
-    /* ------------------ أنماط لعبة "برا السالفة" ------------------ */
-    /* تم استيراد خط Cairo بالفعل في الأعلى */
   </style>
 </head>
 <body>
